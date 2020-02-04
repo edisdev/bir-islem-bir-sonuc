@@ -1,0 +1,31 @@
+@import "./variable.scss";
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-gap: 20px;
+  .card {
+    flex: 1;
+    height: 180px;
+    border-radius: 6px;
+    background: $sky;
+    padding: 20px;
+    cursor: pointer;
+    &.isCorrect {
+      background: $green;
+    }
+    .text {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.close {
+        font-size: 7em;
+      }
+      &.open {
+        font-size: 2em;
+      }
+    }
+  }
+}

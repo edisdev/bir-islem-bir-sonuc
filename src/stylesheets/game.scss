@@ -1,0 +1,30 @@
+@import './variable.scss';
+
+.game {
+  text-align: center;
+  width: calc(100vw - 40px);
+  height: 100vh;
+  padding: 20px;
+  &Name {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba($white, .1);
+    padding: 20px;
+  }
+  &Content {
+    margin-top: 20px;
+    &Time {
+      margin-bottom: 20px;
+    }
+  }
+  &Description {
+    p {
+     line-height: 40px;
+    }
+    .shorten {
+      margin-top: 20px;
+      span {
+        margin-left: 20px;
+      }
+    }
+  }
+}

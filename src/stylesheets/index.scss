@@ -1,0 +1,40 @@
+@import './variable.scss';
+
+body {
+  background: $app-color;
+  font-family: sans-serif;
+  color: $app-font-color;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  padding: 10px 20px;
+  outline: none;
+  border-radius: $border-radius;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  @each $variant, $color in $theme {
+    &-#{$variant} {
+      background: $color;
+      color: $white;
+      &:hover {
+        background: darken($color, 5%);
+      }
+    }
+  }
+}
+
+.App {
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+}
