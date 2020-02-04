@@ -36,7 +36,7 @@ export default () => {
   }, [game.isStart, timer])
 
   function toggleGame () {
-    game.setStart(!game.isStart)
+    game.start()
     if (game.isStart) {
       setTimer(0)
       game.initQuestions()
@@ -69,7 +69,7 @@ export default () => {
           {actionButton.text}
         </button>
         <GameStatus timer={timer} status={gameStatus()} success={game.successed}/>
-        {game.isStart && !game.isFinished ?
+        {game.isStart ?
           <Cards />
           :
           <div className="gameDescription">

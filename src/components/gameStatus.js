@@ -16,7 +16,7 @@ export default ({ timer, status, success }) => {
         <div className="gameContentTime">Süre: {timer} saniye</div>
       }
       { finishedMessage &&
-        <div>{finishedMessage}</div>
+        <div className="gameContentMessage">{finishedMessage}</div>
       }
     </div>
   )

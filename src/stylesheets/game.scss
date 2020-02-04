@@ -15,6 +15,20 @@
     &Time {
       margin-bottom: 20px;
     }
+    &Message {
+      font-size: 1.5em;
+      color: $app-color;
+      background: rgba($orange, .7);
+      border: 1px solid $orange;
+      border-radius: $border-radius;
+      min-height: 50px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
   }
   &Description {
     p {

@@ -40,8 +40,9 @@ export default class Game {
   }
 
   start() {
-    this.isStart = !this.setStart
-    if(this.isStart) this.isFinished = false
+    this.setStart(!this.isStart)
+    this.isFinished = false
+    this.successed = false
   }
 
   finish () {  
@@ -49,11 +50,11 @@ export default class Game {
     this.results = []
     this.mixedData = new Array(this.cardCount)
     this.isFinished = true
+    this.setStart(false)
   }
 
   successControl () {
      let succesCards = this.mixedData.filter(_ => _.isCorrect)
-    console.log(succesCards.length, this.mixedData.length)
     if (succesCards.length === this.mixedData.length) {
       this.successed = true
       this.finish()
